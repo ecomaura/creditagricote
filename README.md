@@ -13,6 +13,8 @@ Photo slots show a tinted placeholder until you add a file with the matching nam
 | File | Used on |
 |---|---|
 | `home-about.jpg` (4:5) | Home, about section |
+| `who-salaried.jpg`, `who-business.jpg`, `who-families.jpg`, `who-investors.jpg` (4:3) | Home, who we help |
+| `home-beyond.jpg` (4:3) | Home, beyond loans |
 | `about-team.jpg` (5:4) | About |
 | `about-office.jpg` (4:3) | About |
 | `service-loans.jpg` (4:3) | Services |

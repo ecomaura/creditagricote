@@ -91,6 +91,34 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><h2>Check your monthly EMI in seconds</h2><p>Move the sliders to see what a loan could cost each month. Full calculators are on our <a class="text-link" href="tools.html">calculators page</a>.</p></div>
+    <div class="calc" id="emi-calc">
+      <div class="calc-in">
+        <div class="field"><div class="field-top"><label for="emi-amount">Loan amount</label><output id="emi-amount-out" for="emi-amount"></output></div>
+          <input type="range" id="emi-amount" min="50000" max="50000000" step="50000" value="2500000"></div>
+        <div class="field"><div class="field-top"><label for="emi-rate">Interest rate (per year)</label><output id="emi-rate-out" for="emi-rate"></output></div>
+          <input type="range" id="emi-rate" min="5" max="30" step="0.1" value="10.5"></div>
+        <div class="field" style="margin-bottom:0"><div class="field-top"><label for="emi-tenure">Tenure</label><output id="emi-tenure-out" for="emi-tenure"></output></div>
+          <input type="range" id="emi-tenure" min="6" max="360" step="6" value="120"></div>
+      </div>
+      <div class="calc-out" aria-live="polite">
+        <span class="result-label">Your monthly EMI</span>
+        <div class="result-big" id="emi-result"></div>
+        <div class="split-bar" aria-hidden="true"><i id="emi-bar"></i><b></b></div>
+        <dl class="rows">
+          <div><dt><span class="dot" style="background:var(--red)"></span>Principal</dt><dd id="emi-principal"></dd></div>
+          <div><dt><span class="dot" style="background:#fff"></span>Total interest</dt><dd id="emi-interest"></dd></div>
+          <div><dt>Total payable</dt><dd id="emi-total"></dd></div>
+        </dl>
+        <a class="btn light small" style="margin-top:1.4rem;align-self:flex-start" href="contact.html?service=Loan">Apply for a loan</a>
+      </div>
+    </div>
+    <p class="note">Estimate only. Actual EMI depends on the lender's rate, fees and method.</p>
+  </div>
+</section>
+
 <section class="section dark">
   <div class="wrap">
     <div class="sec-head"><h2>Why people choose Credit Agricote</h2></div>
@@ -105,6 +133,18 @@
   </div>
 </section>
 
+<section class="section tint">
+  <div class="wrap">
+    <div class="sec-head"><h2>Who we help</h2><p>Whatever stage you are at, we start with your situation, not a product.</p></div>
+    <div class="audience">
+      <div><div class="media " style="--ar:4/3" role="img" aria-label="Salaried professional"><img src="assets/img/who-salaried.jpg" alt="" loading="lazy" onerror="this.remove()"></div><h3>Salaried professionals</h3><p>Home, personal and vehicle loans, plus insurance and a SIP to build savings alongside.</p></div>
+      <div><div class="media " style="--ar:4/3" role="img" aria-label="Business owner"><img src="assets/img/who-business.jpg" alt="" loading="lazy" onerror="this.remove()"></div><h3>Business owners</h3><p>Business loans, working capital and loan against property to start, run or grow.</p></div>
+      <div><div class="media " style="--ar:4/3" role="img" aria-label="Family"><img src="assets/img/who-families.jpg" alt="" loading="lazy" onerror="this.remove()"></div><h3>Families</h3><p>Life and health cover that protects what you have built, and education funding for children.</p></div>
+      <div><div class="media " style="--ar:4/3" role="img" aria-label="Investor"><img src="assets/img/who-investors.jpg" alt="" loading="lazy" onerror="this.remove()"></div><h3>Investors</h3><p>First-time SIPs, lump sum investing and a review of what you already hold.</p></div>
+    </div>
+  </div>
+</section>
+
 <section class="section">
   <div class="wrap">
     <div class="sec-head"><h2>How it works</h2><p>Four simple steps from first call to funds in your account.</p></div>
@@ -114,6 +154,69 @@
       <li><h3>Submit documents</h3><p>Upload documents on WhatsApp. We check them so applications go in complete.</p></li>
       <li><h3>Get approved and funded</h3><p>Once the lender approves, the loan is disbursed. We stay in touch throughout.</p></li>
     </ol>
+  </div>
+</section>
+<section class="section tint">
+  <div class="wrap split center flip">
+    <div class="media " style="--ar:4/3" role="img" aria-label="Family planning their finances together"><img src="assets/img/home-beyond.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+    <div>
+      <h2>Beyond loans: protect and grow what you have</h2>
+      <p class="lead" style="margin-top:1.2rem">A loan solves today's need. Insurance and investments look after tomorrow. We help you plan all three together.</p>
+      <ul class="svc-list" style="margin-top:1.5rem">
+        <li><a href="services.html#insurance"><span class="ico soft" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><div><h3>Insurance</h3><p>Life, health and general cover that fits your budget.</p></div></a></li>
+        <li><a href="services.html#mutual-funds"><span class="ico soft" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><div><h3>Mutual funds</h3><p>SIPs and lump sum investing tied to your goals.</p></div></a></li>
+        <li><a href="services.html#portfolio"><span class="ico soft" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v9h9"/><path d="M20.5 15A9 9 0 1 1 9 3.5"/></svg></span><div><h3>Portfolio review</h3><p>A fresh look at what you hold and where to adjust.</p></div></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <div class="sec-head" style="margin:0">
+      <h2>Keep these documents handy</h2>
+      <p>Having these ready makes your application faster. We will confirm the exact list for your loan when we speak.</p>
+      <div class="btn-row" style="margin-top:1.5rem"><a class="btn ghost small" href="loans.html">Documents by loan type</a></div>
+    </div>
+    <div class="docs">
+      <div><span class="ico soft" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.2 3.6-7 8-7s8 2.8 8 7"/></svg></span><h3>Identity and address</h3><p>Aadhaar, PAN, passport or voter ID, and a recent utility bill or rental agreement.</p></div>
+      <div><span class="ico soft" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><h3>Income proof</h3><p>Recent salary slips or Form 16 if salaried. ITR and financials if self-employed.</p></div>
+      <div><span class="ico soft" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5l8-2v18M12 8l8 2v11M2 21h20"/><path d="M8 8h1M8 12h1M8 16h1M16 14h1M16 18h1"/></svg></span><h3>Bank statements</h3><p>Usually the last 6 to 12 months of your primary account.</p></div>
+      <div><span class="ico soft" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><h3>Purpose or security papers</h3><p>Property papers, vehicle quotation, admission letter or gold items, depending on the loan.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section tint">
+  <div class="wrap split">
+    <div class="sec-head" style="margin:0"><h2>Common questions</h2><p>Short answers to what people ask us first. More on our <a class="text-link" href="loans.html">loans page</a>.</p></div>
+    <div class="faq">
+      <details><summary>Do I need to visit an office?</summary><p>No. You can share your requirement and documents by phone, WhatsApp or the form below, and we take it from there.</p></details>
+      <details><summary>Which loan is right for me?</summary><p>It depends on your purpose, income and credit history. Tell us what you need and we will explain the options and what each would cost.</p></details>
+      <details><summary>Can you help with both a loan and investments?</summary><p>Yes. Many clients start with a loan and later add insurance or a SIP. We keep it all in one conversation.</p></details>
+      <details><summary>What does it cost to talk to you?</summary><p>Talking to an advisor and understanding your options is free of obligation. We explain every fee before you commit to anything.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split center">
+    <div>
+      <h2>Request a free callback</h2>
+      <p class="lead" style="margin-top:1.2rem">Leave your name and number. An advisor will get back to you to understand what you need.</p>
+      <ul class="checks" style="margin-top:1.5rem"><li>No obligation</li><li>Plain-language advice</li><li>Phone or WhatsApp, your choice</li></ul>
+    </div>
+    <form class="form quick" id="contact-form" novalidate>
+      <div class="row">
+        <div><label for="name">Full name</label><input id="name" name="name" autocomplete="name" required></div>
+        <div><label for="phone">Mobile number</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
+      </div>
+      <div><label for="service">I am looking for</label>
+        <select id="service" name="service"><option>Loan</option><option>Insurance</option><option>Mutual fund</option><option>Portfolio</option><option>Something else</option></select></div>
+      <input type="hidden" name="message" value="">
+      <div><button class="btn" type="submit">Send on WhatsApp</button></div>
+      <p class="form-status" id="form-status" role="status"></p>
+    </form>
   </div>
 </section>
 <section class="section" style="padding-top:0">
