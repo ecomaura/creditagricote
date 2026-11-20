@@ -1,317 +1,166 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Credit Agricote | Loans, Insurance, Mutual Funds & Portfolio Management</title>
-<meta name="description" content="Credit Agricote offers clear, practical guidance on loans, insurance, mutual fund investment and portfolio management. Call +91 79775 40128.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Credit Agricote | Expert guidance in financial services</title>
+<meta name="description" content="Loans, insurance, mutual fund investment and portfolio management with clear, expert guidance from Credit Agricote.">
+<meta name="theme-color" content="#D2102A">
 <meta property="og:title" content="Credit Agricote | Expert guidance in financial services">
-<meta property="og:description" content="Loans, insurance, mutual fund investment and portfolio management, explained clearly.">
+<meta property="og:description" content="Loans, insurance, mutual fund investment and portfolio management with clear, expert guidance from Credit Agricote.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="assets/logo.jpg">
-<link rel="icon" href="assets/logo.jpg">
+<meta property="og:image" content="assets/img/services-poster.jpg">
+<link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --red:#C8102E; --red-dark:#9E0C24; --ink:#2A0F14; --text:#4B4447; --muted:#7A7276;
-  --line:#E8E3E4; --soft:#F7F4F4; --white:#fff;
-  --head:"Montserrat","Segoe UI",Arial,sans-serif; --body:"Source Sans 3","Segoe UI",Arial,sans-serif;
-  --max:1120px;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{font-family:var(--body);font-size:18px;line-height:1.6;color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
-a{color:inherit}
-h1,h2,h3{font-family:var(--head);color:var(--ink);line-height:1.15;letter-spacing:-.01em}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
-:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:4px}
-.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:8px 14px;border-radius:6px;z-index:100}
-.skip:focus{left:8px}
-
-/* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 16px var(--head);padding:14px 26px;border-radius:8px;text-decoration:none;border:2px solid var(--red);background:var(--red);color:#fff;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
-.btn:hover{background:var(--red-dark);border-color:var(--red-dark)}
-.btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
-.btn.ghost:hover{background:var(--ink);color:#fff}
-
-/* header */
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
-.brand img{height:64px;width:auto;margin:-6px 0}
-.nav ul{display:flex;gap:32px;list-style:none;align-items:center}
-.nav a.link{text-decoration:none;font:600 15px var(--head);color:var(--ink)}
-.nav a.link:hover{color:var(--red)}
-.nav .btn{padding:10px 20px;font-size:15px}
-.menu-btn{display:none;background:none;border:0;font:600 15px var(--head);color:var(--ink);padding:8px;cursor:pointer}
-
-/* hero */
-.hero{padding:88px 0 96px;background:linear-gradient(180deg,#fff 0,var(--soft) 100%)}
-.hero .wrap{display:grid;grid-template-columns:1.25fr .9fr;gap:64px;align-items:center}
-.hero h1{font-size:clamp(38px,5.2vw,62px);font-weight:800;animation:rise .7s ease both}
-.hero p.lead{font-size:21px;margin:24px 0 36px;max-width:34em;animation:rise .7s .1s ease both}
-.hero .actions{display:flex;gap:14px;flex-wrap:wrap;animation:rise .7s .2s ease both}
-@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-
-.panel{background:#fff;border:1px solid var(--line);border-top:5px solid var(--red);border-radius:12px;padding:32px;box-shadow:0 18px 40px -22px rgba(42,15,20,.35)}
-.panel h2{font-size:22px;margin-bottom:6px}
-.panel p.sub{font-size:16px;color:var(--muted);margin-bottom:20px}
-label{display:block;font:600 14px var(--head);color:var(--ink);margin:14px 0 6px}
-input,select,textarea{width:100%;font:inherit;font-size:17px;padding:12px 14px;border:1.5px solid #CFC8CA;border-radius:8px;background:#fff;color:var(--ink)}
-input:focus,select:focus,textarea:focus{border-color:var(--red);outline:none;box-shadow:0 0 0 3px rgba(200,16,46,.18)}
-textarea{min-height:84px;resize:vertical}
-.panel .btn{width:100%;margin-top:22px}
-.note{font-size:14px;color:var(--muted);margin-top:12px}
-
-/* sections */
-section{padding:96px 0}
-.head{max-width:640px;margin-bottom:56px}
-.head h2{font-size:clamp(30px,3.6vw,42px);font-weight:700}
-.head p{margin-top:16px}
-
-/* services: ruled rows, not identical cards */
-.services{border-top:2px solid var(--ink)}
-.svc{display:grid;grid-template-columns:260px 1fr 220px;gap:40px;padding:36px 0;border-bottom:1px solid var(--line);align-items:start}
-.svc h3{font-size:24px;font-weight:700}
-.svc h3::before{content:"";display:block;width:36px;height:4px;background:var(--red);margin-bottom:16px}
-.svc ul{margin:12px 0 0 20px}
-.svc li{margin:4px 0}
-.svc .for{font-size:16px;color:var(--muted);border-left:3px solid var(--line);padding-left:16px}
-.svc .for b{display:block;font:600 14px var(--head);color:var(--ink);margin-bottom:4px}
-
-/* approach */
-.approach{background:var(--ink);color:#E9DFE1}
-.approach h2{color:#fff}
-.approach .head p{color:#CDBFC2}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;list-style:none;counter-reset:s}
-.steps li{counter-increment:s;border-top:2px solid rgba(255,255,255,.25);padding-top:22px}
-.steps li::before{content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--red);color:#fff;font:700 16px var(--head);margin-bottom:18px}
-.steps h3{color:#fff;font-size:20px;margin-bottom:8px}
-.steps p{font-size:16.5px;color:#CDBFC2}
-
-/* why */
-.why{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-.why dl div{padding:20px 0;border-bottom:1px solid var(--line)}
-.why dl div:first-child{padding-top:0}
-.why dt{font:700 19px var(--head);color:var(--ink);margin-bottom:4px}
-
-/* faq */
-.faq{background:var(--soft)}
-.faq .list{max-width:780px}
-details{border-bottom:1px solid #D9D2D4;padding:20px 0}
-summary{cursor:pointer;font:600 18px var(--head);color:var(--ink);list-style:none;display:flex;justify-content:space-between;gap:20px}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-size:26px;line-height:1;color:var(--red);transition:transform .2s}
-details[open] summary::after{transform:rotate(45deg)}
-details p{margin-top:12px;max-width:42em}
-
-/* contact */
-.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.contact h2{font-size:clamp(30px,3.6vw,42px);margin-bottom:16px}
-.cards{display:grid;gap:16px}
-.cc{display:flex;gap:18px;align-items:center;text-decoration:none;border:1px solid var(--line);border-radius:12px;padding:22px 24px;transition:border-color .2s}
-.cc:hover{border-color:var(--red)}
-.cc .ic{flex:none;width:46px;height:46px;border-radius:50%;background:var(--ink);display:grid;place-items:center}
-.cc svg{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.cc small{display:block;font:600 13px var(--head);color:var(--muted)}
-.cc strong{font:700 20px var(--head);color:var(--ink)}
-
-footer{background:var(--ink);color:#BFB1B5;padding:56px 0 40px;font-size:15px}
-footer .top{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.15)}
-footer img{height:56px;background:#fff;border-radius:8px;padding:2px 10px}
-footer nav{display:flex;gap:24px;flex-wrap:wrap;align-items:center}
-footer a{text-decoration:none}
-footer a:hover{color:#fff}
-footer .legal{margin-top:24px;font-size:13.5px;line-height:1.7;max-width:900px}
-
-@media(max-width:900px){
-  .hero .wrap,.why,.contact .wrap{grid-template-columns:1fr;gap:44px}
-  .svc{grid-template-columns:1fr;gap:16px}
-  .steps{grid-template-columns:1fr 1fr}
-  section{padding:72px 0}.hero{padding:56px 0 72px}
-  .menu-btn{display:block}
-  .nav ul{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:8px 24px 20px;border-bottom:1px solid var(--line)}
-  .nav ul.open{display:flex}
-  .nav li{padding:12px 0;border-bottom:1px solid var(--line)}
-  .nav li:last-child{border:0}
-}
-@media(max-width:560px){.steps{grid-template-columns:1fr}body{font-size:17px}.panel{padding:24px}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="Credit Agricote home"><img src="assets/logo.jpg" alt="Credit Agricote"></a>
-    <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
-    <ul id="menu">
-      <li><a class="link" href="#services">Services</a></li>
-      <li><a class="link" href="#approach">How we work</a></li>
-      <li><a class="link" href="#why">Why us</a></li>
-      <li><a class="link" href="#faq">FAQ</a></li>
-      <li><a class="btn" href="#contact">Get in touch</a></li>
-    </ul>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html" aria-label="Credit Agricote home"><img src="assets/logo.png" alt="Credit Agricote" width="220" height="111"></a>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="index.html" aria-current="page">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="loans.html">Loans</a><a href="tools.html">Calculators</a><a href="contact.html">Contact</a>
+      <a class="btn small" href="contact.html">Get a callback</a>
+    </nav>
   </div>
 </header>
-
 <main id="main">
-<div id="top" class="hero">
-  <div class="wrap">
-    <div>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
       <h1>Expert guidance in financial services</h1>
-      <p class="lead">Loans, insurance, mutual funds and portfolio management, explained in plain language so you can decide with confidence.</p>
-      <div class="actions">
-        <a class="btn" href="tel:+917977540128">Call +91 79775 40128</a>
-        <a class="btn ghost" href="#services">View our services</a>
+      <p class="lead">One advisor for your loans, insurance, mutual funds and portfolio. Tell us what you need and we will call you back with clear next steps.</p>
+      <ul class="checks">
+        <li>Loan services</li><li>Insurance services</li><li>Mutual fund investment</li><li>Portfolio management</li>
+      </ul>
+      <div class="btn-row">
+        <a class="btn" href="contact.html?service=Loan">Apply for a loan</a>
+        <a class="btn ghost" href="tel:+917977540128">Call +91 79775 40128</a>
       </div>
     </div>
-    <form class="panel" id="enquiry" aria-labelledby="fh">
-      <h2 id="fh">Request a call back</h2>
-      <p class="sub">Tell us what you need. We reply on WhatsApp.</p>
-      <label for="name">Your name</label>
-      <input id="name" name="name" autocomplete="name" required>
-      <label for="phone">Phone number</label>
-      <input id="phone" name="phone" type="tel" autocomplete="tel" required>
-      <label for="need">I need help with</label>
-      <select id="need" name="need">
-        <option>Loan services</option>
-        <option>Insurance services</option>
-        <option>Mutual fund investment</option>
-        <option>Portfolio management</option>
-        <option>Not sure yet</option>
-      </select>
-      <button class="btn" type="submit">Send on WhatsApp</button>
-      <p class="note">This opens WhatsApp with your details filled in. Nothing is stored on this site.</p>
-    </form>
-  </div>
-</div>
-
-<section id="services">
-  <div class="wrap">
-    <div class="head">
-      <h2>What we help you with</h2>
-      <p>Four services, one point of contact. Start with the one you need today and add others as your goals change.</p>
-    </div>
-    <div class="services">
-      <article class="svc">
-        <h3>Loan services</h3>
-        <div>
-          <p>Support in choosing and applying for a loan that fits your income and repayment comfort.</p>
-          <ul><li>Comparing options across lenders</li><li>Checking eligibility and documents</li><li>Help through the application</li></ul>
-        </div>
-        <p class="for"><b>Good for</b>Home, personal and business funding needs.</p>
-      </article>
-      <article class="svc">
-        <h3>Insurance services</h3>
-        <div>
-          <p>Cover that matches your family, health and assets, with the terms explained before you commit.</p>
-          <ul><li>Needs review and cover comparison</li><li>Clear explanation of inclusions and exclusions</li><li>Assistance when you need to renew or claim</li></ul>
-        </div>
-        <p class="for"><b>Good for</b>Protecting your family, health and what you own.</p>
-      </article>
-      <article class="svc">
-        <h3>Mutual fund investment</h3>
-        <div>
-          <p>Invest in mutual funds that suit your goals and time horizon, through a one-time amount or a monthly SIP.</p>
-          <ul><li>Goal-based fund selection</li><li>Simple onboarding and paperwork</li><li>Regular check-ins on how funds are performing</li></ul>
-        </div>
-        <p class="for"><b>Good for</b>Building savings for education, retirement or other long-term goals.</p>
-      </article>
-      <article class="svc">
-        <h3>Portfolio management</h3>
-        <div>
-          <p>A structured look at everything you hold, so your investments work together instead of in isolation.</p>
-          <ul><li>Review of your current holdings</li><li>Spreading risk across asset types</li><li>Periodic rebalancing to stay on track</li></ul>
-        </div>
-        <p class="for"><b>Good for</b>People who already invest and want a clearer plan.</p>
-      </article>
+    <div class="hero-art">
+      <span class="disc" aria-hidden="true"></span>
+      <img src="assets/img/advisor.jpg" alt="A Credit Agricote financial advisor smiling with arms crossed" width="740" height="992">
     </div>
   </div>
 </section>
 
-<section id="approach" class="approach">
-  <div class="wrap">
-    <div class="head">
-      <h2>How we work with you</h2>
-      <p>A simple process that keeps you informed at every stage.</p>
+<section class="section">
+  <div class="wrap split">
+    <div class="sticky sec-head" style="margin:0">
+      <h2>What we help you with</h2>
+      <p>Four services, one conversation. Start with the one you need today and add the others when you are ready.</p>
+      <div class="btn-row" style="margin-top:1.5rem"><a class="btn ghost small" href="services.html">See all services</a></div>
     </div>
+    <ul class="svc-list">
+      <li><a href="services.html#loans"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M16.5 7.5c-.8-1.2-2.4-2-4.5-2-2.6 0-4 1.2-4 2.9 0 4 9 1.8 9 6.1 0 1.8-1.6 3-4.5 3-2.3 0-4-.9-5-2.3"/></svg></span><div><h3>Loan services</h3><p>Home, personal, business, vehicle, gold and education loans, matched to your profile.</p></div></a></li>
+      <li><a href="services.html#insurance"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><div><h3>Insurance services</h3><p>Life, health and general insurance explained clearly, so you cover what matters.</p></div></a></li>
+      <li><a href="services.html#mutual-funds"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><div><h3>Mutual fund investment</h3><p>Start a SIP or invest a lump sum in funds that suit your goals and risk comfort.</p></div></a></li>
+      <li><a href="services.html#portfolio"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v9h9"/><path d="M20.5 15A9 9 0 1 1 9 3.5"/></svg></span><div><h3>Portfolio management</h3><p>Review what you hold, balance it, and keep it on track as your life changes.</p></div></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section tint">
+  <div class="wrap split center">
+    <div class="media arch" style="--ar:4/5" role="img" aria-label="Credit Agricote advisor meeting a client"><img src="assets/img/home-about.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+    <div>
+      <h2>Advice you can follow without a finance degree</h2>
+      <p class="lead" style="margin-top:1.2rem">Credit Agricote helps individuals and business owners make money decisions with confidence. We listen first, explain every option and fee, and stay with you until the work is done.</p>
+      <ul class="checks" style="margin-top:1.8rem">
+        <li>Plain-language explanations, no jargon</li>
+        <li>Options matched to your income and goals</li>
+        <li>Support by phone and WhatsApp</li>
+      </ul>
+      <div class="btn-row"><a class="btn" href="about.html">About Credit Agricote</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><h2>Loans for every stage</h2><p>Pick a loan type to see who it suits and what you will usually need to apply.</p></div>
+    <div class="tiles"><a class="tile" href="loans.html#home"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span><h3>Home loans</h3><p>Buy, build or renovate a home with a repayment plan that fits your income.</p></a><a class="tile" href="loans.html#personal"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.2 3.6-7 8-7s8 2.8 8 7"/></svg></span><h3>Personal loans</h3><p>Quick funds for weddings, travel, medical needs or any planned expense.</p></a><a class="tile" href="loans.html#business"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg></span><h3>Business loans</h3><p>Funding to start, run or expand your business.</p></a><a class="tile" href="loans.html#vehicle"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16l1.5-5.5A2 2 0 0 1 8.4 9h7.2a2 2 0 0 1 1.9 1.5L19 16"/><rect x="3" y="16" width="18" height="4" rx="1.5"/><circle cx="7.5" cy="18" r=".6"/><circle cx="16.5" cy="18" r=".6"/></svg></span><h3>Vehicle loans</h3><p>Finance a new or used car or two-wheeler.</p></a><a class="tile" href="loans.html#gold"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18l3-6h12l3 6H3z"/><path d="M8 12l1.5-5h5L16 12"/></svg></span><h3>Gold loans</h3><p>Borrow against your gold with fast processing and flexible repayment.</p></a><a class="tile" href="loans.html#education"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5L2 9z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5M22 9v6"/></svg></span><h3>Education loans</h3><p>Support for higher studies in India or abroad.</p></a><a class="tile" href="loans.html#property"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5l8-2v18M12 8l8 2v11M2 21h20"/><path d="M8 8h1M8 12h1M8 16h1M16 14h1M16 18h1"/></svg></span><h3>Loan against property</h3><p>Use your residential or commercial property to raise larger amounts.</p></a><a class="tile" href="loans.html#working-capital"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 0 1-14 5.3M4 12A8 8 0 0 1 18 6.7"/><path d="M18 3v4h-4M6 21v-4h4"/></svg></span><h3>Working capital</h3><p>Keep daily operations running with short-term business finance.</p></a></div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="wrap">
+    <div class="sec-head"><h2>Why people choose Credit Agricote</h2></div>
+    <div class="why">
+      <div><span class="ico soft" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.2 3.6-7 8-7s8 2.8 8 7"/></svg></span><h3>Clear guidance</h3><p>We explain what each option means for your monthly budget before you decide.</p></div>
+      <div><span class="ico soft" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><h3>Minimal paperwork</h3><p>We tell you exactly which documents you need, so nothing is asked for twice.</p></div>
+      <div><span class="ico soft" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12V4h8l10 10-8 8L3 12z"/><circle cx="7.500" cy="8.500" r="1"/></svg></span><h3>Fees explained upfront</h3><p>Processing fees, charges and terms are laid out before you commit.</p></div>
+      <div><span class="ico soft" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-5.4A8 8 0 1 1 21 12z"/></svg></span><h3>Phone and WhatsApp support</h3><p>Reach a real person and share documents on the channel you already use.</p></div>
+      <div><span class="ico soft" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.500"/><path d="M2.500 20c0-3.600 2.900-6 6.500-6s6.500 2.400 6.500 6"/><path d="M16 4.500a3.500 3.500 0 0 1 0 7M18 14.500c2.200.8 3.500 2.700 3.500 5.500"/></svg></span><h3>Matched to your profile</h3><p>Your income, credit history and goals shape the options we suggest.</p></div>
+      <div><span class="ico soft" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Help after approval</h3><p>We follow up through disbursal, and are here for reviews later on.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><h2>How it works</h2><p>Four simple steps from first call to funds in your account.</p></div>
     <ol class="steps">
-      <li><h3>Talk</h3><p>A short conversation about your goals, income and any existing commitments.</p></li>
-      <li><h3>Review</h3><p>We look at your numbers and the options available for what you need.</p></li>
-      <li><h3>Recommend</h3><p>You get a clear suggestion with the reasons, costs and risks explained.</p></li>
-      <li><h3>Follow up</h3><p>We check in regularly and adjust as your situation changes.</p></li>
+      <li><h3>Share your need</h3><p>Fill in the short form, call us, or send a WhatsApp message.</p></li>
+      <li><h3>We call you back</h3><p>An advisor understands your situation and suggests suitable options.</p></li>
+      <li><h3>Submit documents</h3><p>Upload documents on WhatsApp. We check them so applications go in complete.</p></li>
+      <li><h3>Get approved and funded</h3><p>Once the lender approves, the loan is disbursed. We stay in touch throughout.</p></li>
     </ol>
   </div>
 </section>
-
-<section id="why">
-  <div class="wrap why">
-    <div class="head" style="margin:0">
-      <h2>Advice built around you, not a product</h2>
-      <p>Financial decisions are personal. We start with your situation and work toward the right solution, not the other way round.</p>
-      <p style="margin-top:28px"><a class="btn" href="#contact">Speak with us</a></p>
-    </div>
-    <dl>
-      <div><dt>Plain language</dt><dd>No jargon. If a term matters, we explain it.</dd></div>
-      <div><dt>Transparent costs and risks</dt><dd>You see the charges and the downsides before you decide.</dd></div>
-      <div><dt>One team for several needs</dt><dd>Loans, protection and investments reviewed together, so nothing conflicts.</dd></div>
-      <div><dt>Ongoing support</dt><dd>We stay available after the paperwork is done.</dd></div>
-    </dl>
-  </div>
-</section>
-
-<section id="faq" class="faq">
+<section class="section" style="padding-top:0">
   <div class="wrap">
-    <div class="head"><h2>Common questions</h2></div>
-    <div class="list">
-      <details><summary>How do I get started?</summary><p>Call us or send the form above. We will arrange a short conversation to understand what you need before suggesting anything.</p></details>
-      <details><summary>Which documents might I need for a loan?</summary><p>This depends on the loan type and lender. Typically it includes identity and address proof, income documents and bank statements. We will give you an exact list once we know your case.</p></details>
-      <details><summary>Can I start investing with a small amount?</summary><p>Many mutual funds accept small monthly SIPs. We will help you choose an amount that fits your budget and goal.</p></details>
-      <details><summary>Are mutual fund returns guaranteed?</summary><p>No. Mutual fund investments are subject to market risks and returns are not assured. We help you pick funds that match your risk comfort and time horizon.</p></details>
-      <details><summary>Do you only help with one service at a time?</summary><p>No. Many clients begin with one need and later add others. We keep your full picture in view.</p></details>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="contact">
-  <div class="wrap">
-    <div>
-      <h2>Let's talk about your goals</h2>
-      <p>Call or visit our website for a conversation about loans, insurance or investments. There is no pressure to commit.</p>
-    </div>
-    <div class="cards">
-      <a class="cc" href="tel:+917977540128"><span class="ic"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span><span><small>Phone</small><strong>+91 79775 40128</strong></span></a>
-      <a class="cc" href="https://www.creditagricote.in"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></span><span><small>Website</small><strong>www.creditagricote.in</strong></span></a>
+    <div class="cta">
+      <div><h2>Not sure which option fits you?</h2><p>Tell us what you need. An advisor will call you back and explain your options in plain language.</p></div>
+      <div class="btn-row">
+        <a class="btn light" href="tel:+917977540128">Call +91 79775 40128</a>
+        <a class="btn outline-light" href="https://wa.me/917977540128" target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
     </div>
   </div>
 </section>
 </main>
-
-<footer>
+<footer class="site-footer">
   <div class="wrap">
-    <div class="top">
-      <img src="assets/logo.jpg" alt="Credit Agricote">
-      <nav aria-label="Footer"><a href="#services">Services</a><a href="#approach">How we work</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+    <div class="foot">
+      <div>
+        <img src="assets/logo.png" alt="Credit Agricote" width="220" height="111">
+        <p>Expert guidance in loans, insurance, mutual fund investment and portfolio management.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="loans.html">Loans</a></li><li><a href="tools.html">Calculators</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#loans">Loan services</a></li>
+          <li><a href="services.html#insurance">Insurance services</a></li>
+          <li><a href="services.html#mutual-funds">Mutual fund investment</a></li>
+          <li><a href="services.html#portfolio">Portfolio management</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Talk to us</h4>
+        <p><a href="tel:+917977540128">+91 79775 40128</a></p>
+        <p><a href="https://wa.me/917977540128" target="_blank" rel="noopener">Message on WhatsApp</a></p>
+        <p>www.creditagricote.in</p>
+      </div>
     </div>
-    <p class="legal">Mutual fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Past performance does not indicate future returns. Loan and insurance products are subject to the terms, eligibility and approval of the respective lender or insurer. Content on this site is for general information and is not personalised advice.</p>
-    <p class="legal">&copy; <span id="yr">2026</span> Credit Agricote. All rights reserved.</p>
+    <div class="legal">
+      <p>Credit Agricote provides financial guidance and assists with applications. Loan approval, interest rates, fees and tenure are decided by the lending institution and depend on your profile. Mutual fund investments are subject to market risks; read all scheme-related documents carefully. Insurance is the subject matter of solicitation. Calculator results are illustrative.</p>
+      <p>&copy; <span id="year">2026</span> Credit Agricote. All rights reserved.</p>
+    </div>
   </div>
 </footer>
-
-<script>
-document.getElementById('yr').textContent=new Date().getFullYear();
-var mb=document.querySelector('.menu-btn'),m=document.getElementById('menu');
-mb.addEventListener('click',function(){var o=m.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
-m.addEventListener('click',function(e){if(e.target.closest('a')){m.classList.remove('open');mb.setAttribute('aria-expanded',false)}});
-document.getElementById('enquiry').addEventListener('submit',function(e){
-  e.preventDefault();
-  var f=e.target,t='Hello Credit Agricote, my name is '+f.name.value.trim()+'. I need help with: '+f.need.value+'. Please call me on '+f.phone.value.trim()+'.';
-  window.open('https://wa.me/917977540128?text='+encodeURIComponent(t),'_blank','noopener');
-});
-</script>
+<script src="assets/site.js" defer></script>
 </body>
 </html>
